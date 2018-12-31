@@ -205,6 +205,7 @@ func findPrice(infos *[]NodeInfo) string {
 
 func ParseUrl(url string) (string, error) {
 	var err error
+	var price string
 
 	// create context
 	ctxt := context.Background()
@@ -212,10 +213,10 @@ func ParseUrl(url string) (string, error) {
 	infos, err := gatherNodeInfos(ctxt, dollarSelector, url)
 	if err != nil {
 		log.Print(err)
-		return nil, err
+		return price, err
 	}
 
-	price := findPrice(&infos)
+	price = findPrice(&infos)
 	log.Print(price)
 
 	return price, nil
