@@ -1,0 +1,16 @@
+{
+  "name": "scraper",
+  "version": "1.0",
+  "description": "Find sales",
+  "browser_action": {
+   "default_icon": "images/get_started32.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+          "http://localhost/*","tabs", "storage"
+  ],
+  "options_page": "options.html",  
+  "manifest_version": 2
+}
