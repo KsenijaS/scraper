@@ -11,7 +11,7 @@ import (
 	"strconv"
 )
 
-var url string
+//var url string
 
 type myData struct {
 	Url   string
